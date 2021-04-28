@@ -73,6 +73,7 @@ img{
   height: auto;
   display: block;
   position: relative;
+  max-width: 100%;
  
   
 }
@@ -556,28 +557,33 @@ img{
 
 .portfolio__container{
   row-gap: 2rem;
-  position: relative;
 }
 
             
 .img-comp-container {
   position: relative;
   height: 200px; /*should be the same height as the images*/
-  max-width: auto;
+  max-width: 100%;
 }
 
 .img-comp-img {
   position: absolute;
-  width: auto;
+  width: 100%;
   height: auto;
   overflow:hidden;
-  max-width: auto;
+  max-width: 100%;
 }
 
 .img-comp-img img {
   display:block;
-  max-width: auto;
-
+  max-width: 100%;
+  width: 100%;
+}
+.img-comp-overlay{
+  display:block;
+  max-width: 100%;
+  width: 100%;
+  position: relative;;
 }
 
 .img-comp-slider {
@@ -597,10 +603,11 @@ img{
   float: left;
   width: 33.33%;
   padding: 5px;
+
 }
 
  .row::after {
-  content: "";
+  content:normal;
   clear: both;
   display: table;
 }
@@ -720,17 +727,17 @@ img{
   .about__img img{
     width: 300px;
   }
-  .work__container{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    column-gap: 2rem;
-  }
+
   .contact__form{
     width: 360px;
   }
   .contact__container{
     justify-items: center;
   }
+  .portfolio__container{
+    flex: none;
+  }
+
 }
 
 @media screen and (min-width: 1024px){
